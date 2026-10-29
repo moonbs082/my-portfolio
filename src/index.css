@@ -1,69 +1,70 @@
-/* 컬러 팔레트 디자인 시스템.md 의 CSS 변수 */
+/* 컬러 팔레트 디자인 시스템.md 의 CSS 변수 (군함 사진 팔레트, 다크모드 기본) */
 :root {
   /* Primary Colors */
-  --color-primary: #aa3bff;
-  --color-primary-light: #c084fc;
-  --color-primary-dark: #7840b0;
+  --color-primary: #253B52;
+  --color-primary-light: #324C69;
+  --color-primary-dark: #1A2B3D;
 
   /* Secondary Colors */
-  --color-secondary: #380880;
-  --color-accent: #9858d0;
+  --color-secondary: #ABAEB0;
+  --color-accent: #658789;
+  --color-accent-strong: #CD2E3A;
 
   /* Background Colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f4f3ec;
+  --color-bg-primary: #061718;
+  --color-bg-secondary: #253B52;
 
   /* Text Colors */
-  --color-text-primary: #08060d;
-  --color-text-secondary: #6b6375;
-  --color-text-muted: #787080;
+  --color-text-primary: #E8EDF2;
+  --color-text-secondary: #ABAEB0;
+  --color-text-muted: #86888D;
 
-  /* Border */
-  --color-border: #e5e4e7;
+  /* Border Colors */
+  --color-border: #4C5965;
+  --color-border-subtle: #535860;
 
   /* Interactive Colors */
-  --color-button-primary: #aa3bff;
-  --color-button-hover: #8848c0;
-  --color-button-text: #ffffff;
-  --color-link: #8848c0;
-  --color-link-hover: #7840b0;
+  --color-button-primary: #658789;
+  --color-button-text: #061718;
+  --color-button-hover: #7FA3A5;
+  --color-link: #7FA3A5;
+  --color-link-hover: #BAC5C6;
 
-  /* 반투명 보조 */
-  --color-accent-bg: rgba(170, 59, 255, 0.1);
-  --color-accent-border: rgba(170, 59, 255, 0.5);
+  /* 반투명 보조 (accent #658789 기반) */
+  --color-accent-bg: rgba(101, 135, 137, 0.18);
 
-  /* 히어로 그라데이션 */
-  --gradient-hero: linear-gradient(135deg, #aa3bff, #380880);
+  /* 히어로 그라데이션: 위쪽 바다 → 짙은 바다 */
+  --gradient-hero: linear-gradient(180deg, #324C69 0%, #1A2B3D 60%, #061718 100%);
+  --color-hero-text: #E8EDF2;
 
-  color-scheme: light dark;
+  color-scheme: dark light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #c084fc;
-    --color-primary-light: #d8b4fe;
-    --color-primary-dark: #aa3bff;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-bg-primary: #F4F6F8;
+    --color-bg-secondary: #E6EBF0;
+    --color-text-primary: #061718;
+    --color-text-secondary: #253B52;
+    --color-text-muted: #4C5965;
+    --color-border: #C5CDD5;
+    --color-border-subtle: #DCE2E7;
+    --color-accent: #4A6B6D;
+    --color-button-primary: #253B52;
+    --color-button-text: #FFFFFF;
+    --color-button-hover: #324C69;
+    --color-link: #4A6B6D;
+    --color-link-hover: #253B52;
 
-    --color-bg-primary: #16171d;
-    --color-bg-secondary: #1f2028;
-
-    --color-text-primary: #f3f4f6;
-    --color-text-secondary: #9ca3af;
-    --color-text-muted: #6b7280;
-
-    --color-border: #2e303a;
-
-    --color-button-primary: #c084fc;
-    --color-button-hover: #aa3bff;
-    --color-button-text: #16171d;
-    --color-link: #c084fc;
-    --color-link-hover: #d8b4fe;
-
-    --color-accent-bg: rgba(192, 132, 252, 0.15);
-    --color-accent-border: rgba(192, 132, 252, 0.5);
+    --color-accent-bg: rgba(74, 107, 109, 0.12);
   }
 }
 
 body {
   margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }

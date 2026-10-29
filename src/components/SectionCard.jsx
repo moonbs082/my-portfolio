@@ -13,9 +13,9 @@ function SectionCard({ id, label, title, description, highlight = false, childre
         textAlign: 'center',
         border: '1px solid',
         borderColor: highlight ? 'transparent' : 'var(--color-border)',
-        borderTop: highlight ? 'none' : '4px solid var(--color-primary)',
+        borderTop: highlight ? 'none' : '4px solid var(--color-accent)',
         background: highlight ? 'var(--gradient-hero)' : 'var(--color-bg-secondary)',
-        color: highlight ? '#ffffff' : 'var(--color-text-secondary)',
+        color: highlight ? 'var(--color-hero-text)' : 'var(--color-text-secondary)',
       }}
     >
       <CardContent sx={{ py: { xs: 4, md: 6 }, px: { xs: 3, md: 6 } }}>
@@ -28,7 +28,7 @@ function SectionCard({ id, label, title, description, highlight = false, childre
             borderRadius: 1,
             fontWeight: 700,
             letterSpacing: 2,
-            color: highlight ? '#ffffff' : 'var(--color-primary)',
+            color: highlight ? 'var(--color-hero-text)' : 'var(--color-link)',
             bgcolor: highlight ? 'rgba(255, 255, 255, 0.15)' : 'var(--color-accent-bg)',
           }}
         >
@@ -40,7 +40,7 @@ function SectionCard({ id, label, title, description, highlight = false, childre
           sx={{
             fontWeight: 700,
             mb: 2,
-            color: highlight ? '#ffffff' : 'var(--color-text-primary)',
+            color: highlight ? 'var(--color-hero-text)' : 'var(--color-text-primary)',
           }}
         >
           {title}

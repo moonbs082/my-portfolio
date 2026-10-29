@@ -17,7 +17,7 @@ function NavBar() {
       position="sticky"
       elevation={0}
       sx={{
-        bgcolor: 'var(--color-bg-primary)',
+        bgcolor: 'var(--color-bg-secondary)',
         borderBottom: '1px solid var(--color-border)',
       }}
     >
@@ -33,9 +33,10 @@ function NavBar() {
       >
         <Typography
           variant="h6"
-          sx={{ flexGrow: 1, fontWeight: 700, color: 'var(--color-primary)' }}
+          sx={{ flexGrow: 1, fontWeight: 700, color: 'var(--color-text-primary)' }}
         >
           My Portfolio
+          <Box component="span" sx={{ color: 'var(--color-accent-strong)' }}>.</Box>
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
           {navItems.map((item) => (
@@ -48,11 +49,11 @@ function NavBar() {
                 color: 'var(--color-text-secondary)',
                 fontWeight: 600,
                 '&:hover': {
-                  color: 'var(--color-primary)',
+                  color: 'var(--color-link)',
                   bgcolor: 'var(--color-accent-bg)',
                 },
                 '&.active': {
-                  color: 'var(--color-primary)',
+                  color: 'var(--color-link)',
                   bgcolor: 'var(--color-accent-bg)',
                 },
               }}

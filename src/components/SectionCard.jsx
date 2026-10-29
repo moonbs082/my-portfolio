@@ -3,7 +3,14 @@ import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 
 // 각 섹션의 역할이 한눈에 보이도록 라벨 + 제목 + 설명으로 구성한 카드
-function SectionCard({ id, label, title, description, highlight = false, children }) {
+function SectionCard({ id, label, title, description, highlight = false, image, children }) {
+  // 사진 배경: 어두운 그라데이션을 덮어 글자 가독성 확보 (모바일은 더 진하게)
+  const imageBackground = (from, to) =>
+    `linear-gradient(180deg, rgba(6, 23, 24, ${from}) 0%, rgba(6, 23, 24, ${to}) 100%), url(${image}) center / cover no-repeat`
+  const highlightBackground = image
+    ? { xs: imageBackground(0.6, 0.95), md: imageBackground(0.3, 0.9) }
+    : 'var(--gradient-hero)'
+
   return (
     <Card
       id={id}
@@ -14,7 +21,11 @@ function SectionCard({ id, label, title, description, highlight = false, childre
         border: '1px solid',
         borderColor: highlight ? 'transparent' : 'var(--color-border)',
         borderTop: highlight ? 'none' : '4px solid var(--color-accent)',
-        background: highlight ? 'var(--gradient-hero)' : 'var(--color-bg-secondary)',
+        background: highlight ? highlightBackground : 'var(--color-bg-secondary)',
+        minHeight: image ? { xs: 280, md: 400 } : undefined,
+        display: image ? 'flex' : undefined,
+        alignItems: 'center',
+        justifyContent: 'center',
         color: highlight ? 'var(--color-hero-text)' : 'var(--color-text-secondary)',
       }}
     >

@@ -7,7 +7,7 @@
 
   /* Secondary Colors */
   --color-secondary: #ABAEB0;
-  --color-accent: #658789;
+  --color-accent: #CD2E3A;
   --color-accent-strong: #CD2E3A;
 
   /* Background Colors */
@@ -24,14 +24,14 @@
   --color-border-subtle: #535860;
 
   /* Interactive Colors */
-  --color-button-primary: #658789;
-  --color-button-text: #061718;
-  --color-button-hover: #7FA3A5;
-  --color-link: #7FA3A5;
-  --color-link-hover: #BAC5C6;
+  --color-button-primary: #CD2E3A;
+  --color-button-text: #FFFFFF;
+  --color-button-hover: #A8232E;
+  --color-link: #FF8A90;
+  --color-link-hover: #FFB3B7;
 
-  /* 반투명 보조 (accent #658789 기반) */
-  --color-accent-bg: rgba(101, 135, 137, 0.18);
+  /* 반투명 보조 (accent #CD2E3A 기반) */
+  --color-accent-bg: rgba(205, 46, 58, 0.18);
 
   /* 히어로 그라데이션: 위쪽 바다 → 짙은 바다 */
   --gradient-hero: linear-gradient(180deg, #324C69 0%, #1A2B3D 60%, #061718 100%);
@@ -49,14 +49,14 @@
     --color-text-muted: #4C5965;
     --color-border: #C5CDD5;
     --color-border-subtle: #DCE2E7;
-    --color-accent: #4A6B6D;
-    --color-button-primary: #253B52;
+    --color-accent: #CD2E3A;
+    --color-button-primary: #CD2E3A;
     --color-button-text: #FFFFFF;
-    --color-button-hover: #324C69;
-    --color-link: #4A6B6D;
-    --color-link-hover: #253B52;
+    --color-button-hover: #A8232E;
+    --color-link: #A8232E;
+    --color-link-hover: #7F1A23;
 
-    --color-accent-bg: rgba(74, 107, 109, 0.12);
+    --color-accent-bg: rgba(205, 46, 58, 0.1);
   }
 }
 

@@ -3,6 +3,14 @@ import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import SectionCard from '../components/SectionCard.jsx'
 
+// 로컬 전용 이미지 (src/assets/local 은 .gitignore 대상).
+// 파일이 없는 환경(GitHub Actions 빌드)에서는 undefined → 기본 그라데이션 배경
+const localImages = import.meta.glob('../assets/local/hero-tron.jpg', {
+  eager: true,
+  import: 'default',
+})
+const heroImage = Object.values(localImages)[0]
+
 const sections = [
   {
     id: 'hero',
@@ -11,6 +19,7 @@ const sections = [
     description:
       '여기는 Hero 섹션입니다. 메인 비주얼, 이름, 간단 소개가 들어갈 예정입니다.',
     highlight: true,
+    image: heroImage,
   },
   {
     id: 'about',

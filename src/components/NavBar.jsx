@@ -9,6 +9,7 @@ const navItems = [
   { label: 'Home', to: '/' },
   { label: 'About Me', to: '/about' },
   { label: 'Projects', to: '/projects' },
+  { label: 'Guestbook', to: '/guestbook' },
 ]
 
 function NavBar() {

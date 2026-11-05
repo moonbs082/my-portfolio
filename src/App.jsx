@@ -6,6 +6,7 @@ import NavBar from './components/NavBar.jsx'
 import Home from './pages/Home.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 import Projects from './pages/Projects.jsx'
+import Guestbook from './pages/Guestbook.jsx'
 
 // GitHub Pages는 새로고침 시 하위 경로를 찾지 못하므로 HashRouter 사용
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/guestbook" element={<Guestbook />} />
         </Routes>
       </Container>
       <Box
